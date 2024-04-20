@@ -1,0 +1,56 @@
+﻿<Window x:Class="Diplom.testos1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Diplom"
+        mc:Ignorable="d"
+        Title="testos1" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF224DD4"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" />
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1.1*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="vopros1" Grid.Row="0" Grid.Column="0" Content="Вопрос 1" Background="#FF1A88ED" Click="vopros1_Click"/>
+        <Button x:Name="vopros2" Grid.Row="0" Grid.Column="1" Content="Вопрос 2" Background="#FF1A88ED" Click="vopros2_Click"/>
+        <Button x:Name="vopros3" Grid.Row="0" Grid.Column="2" Content="Вопрос 3" Background="#FF1A88ED" Click="vopros3_Click"/>
+        <Button x:Name="vopros4" Grid.Row="0" Grid.Column="3" Content="Вопрос 4" Background="#FF1A88ED" Click="vopros4_Click"/>
+        <Button x:Name="vopros5" Grid.Row="0" Grid.Column="4" Content="Вопрос 5" Background="#FF1A88ED" Click="vopros5_Click"/>
+        <TextBox x:Name="Voprosik_textbox" Grid.Row="2" Grid.ColumnSpan="4"  Background="#FF5DB6FF" BorderBrush="Black" IsReadOnly="True"/>
+        <TextBox x:Name="otvet1" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3"  Background="#FF5DB6FF" BorderBrush="Black" IsReadOnly="True"/>
+        <TextBox x:Name="otvet2" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="3"  Background="#FF5DB6FF" BorderBrush="Black" IsReadOnly="True"/>
+        <TextBox x:Name="otvet3" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="3"  Background="#FF5DB6FF" BorderBrush="Black" IsReadOnly="True"/>
+        <TextBox x:Name="otvet4" Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="3"  Background="#FF5DB6FF" BorderBrush="Black" IsReadOnly="True"/>
+        <Label Content="Ответ 1" Grid.Row="4" Grid.Column="0"/>
+        <Label Content="Ответ 2" Grid.Row="5" Grid.Column="0"/>
+        <Label Content="Ответ 3" Grid.Row="6" Grid.Column="0"/>
+        <Label Content="Ответ 4" Grid.Row="7" Grid.Column="0"/>
+        <Label Content="Правильный ответ(1 число)" Grid.Row="9" Grid.Column="0"/>
+        <TextBox x:Name="prav_otvet" Grid.Row="9" Grid.Column="1" Grid.ColumnSpan="2" Background="#FF5DB6FF" BorderBrush="Black"/>
+        <Button x:Name="rezult" Content="закончить тест" Grid.Row="9" Grid.Column="4" Background="#FF5DB6FF" BorderBrush="Black" Click="rezult_Click"/>
+        <Button x:Name="Back" Content="назад" Grid.Row="11" Grid.Column="4" Background="#FF5DB6FF" BorderBrush="Black" Click="Back_Click"/>
+    </Grid>
+</Window>

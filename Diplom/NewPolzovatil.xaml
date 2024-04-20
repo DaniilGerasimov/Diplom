@@ -1,0 +1,51 @@
+﻿<Window x:Class="Diplom.NewPolzovatil"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Diplom"
+        mc:Ignorable="d"
+        Title="NewPolzovatil" Height="450" Width="600">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF224DD4"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70" />
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Регистрация"  Grid.Row="0" Grid.ColumnSpan="2" VerticalContentAlignment="Center" HorizontalAlignment="Left" FontFamily="Times New Roman" FontSize="20" FontWeight="Bold" FontStyle="Italic" Width="280" Grid.Column="1"/>
+        <Label Content="Логин" FontSize="18" Grid.Row="1" Grid.Column="0" />
+        <Label Content="Пароль" FontSize="18" Grid.Row="3" Grid.Column="0" />
+        <Label Content="Потдверждение пароля" FontSize="17" Grid.Row="5" Grid.Column="0"    />
+        <Label Content="Никнейм" FontSize="18" Grid.Column="2"    Grid.Row="1" />
+        <Label Content="Почта" FontSize="18" Grid.Row="3" Grid.Column="2" />
+        <TextBox x:Name="Lodins" Grid.Row="2" Grid.Column="0"  Height="30"/>
+        <PasswordBox x:Name="passBox1" Grid.Row="4" Height="30"/>
+        <PasswordBox x:Name="passBox2" Grid.Row="6" Height="30" />
+        <TextBox x:Name="Nikcneim" Grid.Row="2" Grid.Column="2" Height="30"/>
+        <TextBox x:Name="mail" Grid.Row="4" Grid.Column="2" Height="30"/>
+        <Button x:Name="NewPolzov" Grid.Row="7" Grid.Column="2" Height="30" Content="Зарегистрироваться" Click="NewPolzov_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF49DAA8"/>
+                    <GradientStop Color="#FFA75151" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+    </Grid>
+</Window>

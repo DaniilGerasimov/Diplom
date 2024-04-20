@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Хранилище DiplomosModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="FullLecture">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nomer_Lecture" Type="int" />
+          <Property Name="Name_Lecture" Type="nvarchar" MaxLength="50" />
+          <Property Name="Link" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="ImageUsers">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Images" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="IdUsersa" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Rezult">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nick" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Evaluation" Type="int" Nullable="false" />
+          <Property Name="Nomer_testa" Type="int" />
+        </EntityType>
+        <EntityType Name="Test1">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nomer_testa" Type="int" Nullable="false" />
+          <Property Name="Nomer_voprosa" Type="int" Nullable="false" />
+          <Property Name="Vopros" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="Var_otveta_1" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Var_otveta_2" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Var_otveta_3" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Var_otveta_4" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Prav_otvet" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Login" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Nickneim" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Mail" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="Хранилище DiplomosModelContainer">
+          <EntitySet Name="FullLecture" EntityType="Self.FullLecture" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ImageUsers" EntityType="Self.ImageUsers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Rezult" EntityType="Self.Rezult" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Test1" EntityType="Self.Test1" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DiplomosModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="FullLecture">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nomer_Lecture" Type="Int32" />
+          <Property Name="Name_Lecture" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Link" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ImageUsers">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Images" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="IdUsersa" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Rezult">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nick" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Evaluation" Type="Int32" Nullable="false" />
+          <Property Name="Nomer_testa" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Test1">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nomer_testa" Type="Int32" Nullable="false" />
+          <Property Name="Nomer_voprosa" Type="Int32" Nullable="false" />
+          <Property Name="Vopros" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Var_otveta_1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Var_otveta_2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Var_otveta_3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Var_otveta_4" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Prav_otvet" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Login" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Nickneim" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="DiplomosEntities2" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="FullLecture" EntityType="Self.FullLecture" />
+          <EntitySet Name="ImageUsers" EntityType="Self.ImageUsers" />
+          <EntitySet Name="Rezult" EntityType="Self.Rezult" />
+          <EntitySet Name="Test1" EntityType="Self.Test1" />
+          <EntitySet Name="Users" EntityType="Self.Users" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище DiplomosModelContainer" CdmEntityContainer="DiplomosEntities2">
+          <EntitySetMapping Name="FullLecture">
+            <EntityTypeMapping TypeName="DiplomosModel.FullLecture">
+              <MappingFragment StoreEntitySet="FullLecture">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Nomer_Lecture" ColumnName="Nomer_Lecture" />
+                <ScalarProperty Name="Name_Lecture" ColumnName="Name_Lecture" />
+                <ScalarProperty Name="Link" ColumnName="Link" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ImageUsers">
+            <EntityTypeMapping TypeName="DiplomosModel.ImageUsers">
+              <MappingFragment StoreEntitySet="ImageUsers">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Images" ColumnName="Images" />
+                <ScalarProperty Name="IdUsersa" ColumnName="IdUsersa" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Rezult">
+            <EntityTypeMapping TypeName="DiplomosModel.Rezult">
+              <MappingFragment StoreEntitySet="Rezult">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Nick" ColumnName="Nick" />
+                <ScalarProperty Name="Evaluation" ColumnName="Evaluation" />
+                <ScalarProperty Name="Nomer_testa" ColumnName="Nomer_testa" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Test1">
+            <EntityTypeMapping TypeName="DiplomosModel.Test1">
+              <MappingFragment StoreEntitySet="Test1">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Nomer_testa" ColumnName="Nomer_testa" />
+                <ScalarProperty Name="Nomer_voprosa" ColumnName="Nomer_voprosa" />
+                <ScalarProperty Name="Vopros" ColumnName="Vopros" />
+                <ScalarProperty Name="Var_otveta_1" ColumnName="Var_otveta_1" />
+                <ScalarProperty Name="Var_otveta_2" ColumnName="Var_otveta_2" />
+                <ScalarProperty Name="Var_otveta_3" ColumnName="Var_otveta_3" />
+                <ScalarProperty Name="Var_otveta_4" ColumnName="Var_otveta_4" />
+                <ScalarProperty Name="Prav_otvet" ColumnName="Prav_otvet" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="DiplomosModel.Users">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Login" ColumnName="Login" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Nickneim" ColumnName="Nickneim" />
+                <ScalarProperty Name="Mail" ColumnName="Mail" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="false" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
